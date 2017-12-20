@@ -1,0 +1,27 @@
+months=['January',
+       'February',
+       'March',
+       'April',
+       'May',
+       'June',
+       'July',
+       'Auguest',
+       'September',
+       'October',
+       'November',
+       'December'
+]
+
+year=input("year:")
+month=input("month(1-12):")
+day=input("day(1-31):")
+
+month_number=int(month)
+day_number=int(day)
+
+ordinal=['st','nd','rd']+17*['th']+['st','nd','rd']+7*['th']+['st']
+
+month_name=months[month_number-1]
+day_name=ordinal[day_number-1]
+
+print("日期为："+year+' '+month_name+' '+day+day_name)
