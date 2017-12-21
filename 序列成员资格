@@ -1,0 +1,16 @@
+#检查用户名和密码
+database=[
+       ['zhangsan','111'],#这个,千万不能少！！！！！
+       ['lisi','222'],
+       ['wangwu','333']
+]
+
+user_name=input('输入你的用户名:')
+password=input('输入你的密码')
+
+if[user_name,password] in database:
+       print('验证通过')
+#运行结果：
+输入你的用户名:zhangsan
+输入你的密码111
+验证通过
