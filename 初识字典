@@ -1,0 +1,41 @@
+dict={}
+dict['one']="value_key_one"
+dict[2]="value_key_2"
+
+small_dict={'three':"value_key_three",'four':"value_key_four"}
+
+print(dict['one'])
+print(small_dict)
+print(small_dict.keys())
+print(small_dict.values())
+
+'''
+value_key_one
+{'three': 'value_key_three', 'four': 'value_key_four'}
+dict_keys(['three', 'four'])
+dict_values(['value_key_three', 'value_key_four'])
+'''
+
+'''
+从实验结果上来看，key和value都是无序的，key必须用不可变的类型（数字，字符串，元组），
+整个字典是无序的。字典的一般格式 key：values，看上去似乎用列表存储key和values
+'''
+
+#下面是对可变和不可变类型的一些理解：以简单的int类型为例
+a=5
+print(id(a))
+a=a+1
+print(id(a))
+b=5
+print(id(b))
+
+'''
+输出结果
+10919552
+10919584
+10919552
+对原来的对象a进行修改值之后，因为number型的是不可变的类型，所以实际上是
+重新创建了一个新的内存空间里面填6，a指向这片新的内存空间。
+这方面涉及Python内存管理机制，Python对int类型和较短的字符串进行了缓存，
+无论声明多少个值相同的变量，实际上都指向同个内存地址。
+'''
